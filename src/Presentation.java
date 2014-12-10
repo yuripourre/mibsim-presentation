@@ -1,6 +1,7 @@
 import br.com.etyllica.EtyllicaFrame;
 import br.com.etyllica.context.Application;
 import br.com.mibsim.presentation.CommonSlide;
+import br.com.mibsim.presentation.FirstSlide;
 
 
 public class Presentation extends EtyllicaFrame {
@@ -22,7 +23,7 @@ public class Presentation extends EtyllicaFrame {
 		String s = Presentation.class.getResource("").toString();
 		setPath(s+"../");
 		
-		return new CommonSlide(w,h);
+		return new FirstSlide(w,h);
 	}
 
 }
