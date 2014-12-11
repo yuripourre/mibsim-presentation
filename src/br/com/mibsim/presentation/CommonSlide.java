@@ -23,11 +23,11 @@ public class CommonSlide extends Application implements Slide {
 	@Override
 	public void load() {
 		
-		font = FontLoader.getInstance().loadFont("Suplexmentary_Comic_NC.ttf").deriveFont(22f);
+		font = FontLoader.getInstance().loadFont("Suplexmentary_Comic_NC.ttf");
 
 		background = new ImageLayer("bg.png");
 		
-		loading = 100;
+		loading = 10;
 	}
 
 	@Override
@@ -60,9 +60,9 @@ public class CommonSlide extends Application implements Slide {
 		g.drawStringBorderX(text, 110);
 	}
 	
-	protected void drawSentence(Graphic g, int index, String text) {
-		g.setFontSize(42);
-		g.drawStringBorderX(text, 210+70*index);
+	protected void drawSentence(Graphic g, double index, String text) {
+		g.setFontSize(40);
+		g.drawStringBorderX(text, 210+(int)(70*index));
 	}
 	
 	@Override

@@ -22,7 +22,7 @@ public class ProblemsSlide extends CommonSlide {
 				
 		drawTitle(g, "Problemas enfrentados");
 		drawSentence(g, 0, "Robôs não colaborativos");
-		drawSentence(g, 1, "Retrabalho");
+		drawSentence(g, 1, "Redundância nos caminhos");
 		drawSentence(g, 2, "Dificuldade em assimilar novos indivíduos");
 	}
 		
@@ -33,7 +33,7 @@ public class ProblemsSlide extends CommonSlide {
 	
 	@Override
 	public void previousSlide() {
-		nextApplication = new ScenarioSlide(w, h);
+		nextApplication = new UsageSlide(w, h);
 	}
 
 }

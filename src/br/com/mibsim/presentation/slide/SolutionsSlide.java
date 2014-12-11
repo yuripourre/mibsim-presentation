@@ -2,6 +2,7 @@ package br.com.mibsim.presentation.slide;
 
 import br.com.etyllica.core.graphics.Graphic;
 import br.com.mibsim.presentation.CommonSlide;
+import br.com.mibsim.presentation.slide.proposal.ProposalSlide;
 
 public class SolutionsSlide extends CommonSlide {
 	
@@ -22,13 +23,13 @@ public class SolutionsSlide extends CommonSlide {
 				
 		drawTitle(g, "Solução");
 		drawSentence(g, 0, "Rede de aspiradores colaborativos");
-		drawSentence(g, 1, "Integração com novos indivíduos");
+		drawSentence(g, 1, "Economia de bateria (menos retrabalho)");
+		drawSentence(g, 2, "Integração com novos indivíduos");
 	}
 		
 	@Override
 	public void nextSlide() {
-		// TODO Auto-generated method stub
-		
+		nextApplication = new ProposalSlide(w, h);
 	}
 	
 	@Override

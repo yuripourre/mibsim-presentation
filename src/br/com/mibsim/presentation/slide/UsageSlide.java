@@ -3,9 +3,9 @@ package br.com.mibsim.presentation.slide;
 import br.com.etyllica.core.graphics.Graphic;
 import br.com.mibsim.presentation.CommonSlide;
 
-public class ScenarioSlide extends CommonSlide {
+public class UsageSlide extends CommonSlide {
 	
-	public ScenarioSlide(int w, int h) {
+	public UsageSlide(int w, int h) {
 		super(w, h);
 	}
 
@@ -20,7 +20,7 @@ public class ScenarioSlide extends CommonSlide {
 	public void draw(Graphic g) {
 		super.draw(g);
 				
-		drawTitle(g, "Cenário Atual");
+		drawTitle(g, "Uso de robôs autônomos");
 		drawSentence(g, 0, "Aspirador Roomba");
 		drawSentence(g, 1, "Viagens a marte");
 	}
