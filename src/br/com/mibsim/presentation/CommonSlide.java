@@ -55,6 +55,16 @@ public class CommonSlide extends Application implements Slide {
 		return GUIEvent.NONE;
 	}
 	
+	protected void drawTitle(Graphic g, String text) {
+		g.setFontSize(80);
+		g.drawStringBorderX(text, 110);
+	}
+	
+	protected void drawSentence(Graphic g, int index, String text) {
+		g.setFontSize(42);
+		g.drawStringBorderX(text, 210+70*index);
+	}
+	
 	@Override
 	public void nextSlide() {
 		// TODO Auto-generated method stub

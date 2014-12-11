@@ -1,6 +1,7 @@
-package br.com.mibsim.presentation;
+package br.com.mibsim.presentation.slide;
 
 import br.com.etyllica.core.graphics.Graphic;
+import br.com.mibsim.presentation.CommonSlide;
 
 public class FirstSlide extends CommonSlide {
 	
@@ -13,14 +14,14 @@ public class FirstSlide extends CommonSlide {
 		super.load();
 		
 		loading = 100;
-	}	
+	}
 	
 	@Override
 	public void draw(Graphic g) {
 		super.draw(g);
 				
 		drawTitle(g);
-		drawSubTitle(g);		
+		drawSubTitle(g);
 	}
 	
 	protected void drawTitle(Graphic g) {
@@ -36,8 +37,7 @@ public class FirstSlide extends CommonSlide {
 	
 	@Override
 	public void nextSlide() {
-		// TODO Auto-generated method stub
-		
+		nextApplication = new MotivationSlide(w, h);	
 	}
 
 }

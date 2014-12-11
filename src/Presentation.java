@@ -1,7 +1,8 @@
 import br.com.etyllica.EtyllicaFrame;
 import br.com.etyllica.context.Application;
 import br.com.etyllica.core.loader.JoystickLoader;
-import br.com.mibsim.presentation.FirstSlide;
+import br.com.mibsim.presentation.slide.FirstSlide;
+import br.com.mibsim.presentation.slide.MotivationSlide;
 
 
 public class Presentation extends EtyllicaFrame {
@@ -25,7 +26,8 @@ public class Presentation extends EtyllicaFrame {
 		
 		JoystickLoader.getInstance().init(1);
 		
-		return new FirstSlide(w,h);
+		//return new FirstSlide(w,h);
+		return new MotivationSlide(w,h);
 	}
 
 }
