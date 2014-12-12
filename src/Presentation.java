@@ -28,7 +28,7 @@ public class Presentation extends EtyllicaFrame {
 		String s = Presentation.class.getResource("").toString();
 		setPath(s+"../");
 		
-		JoystickLoader.getInstance().init(1);
+		//JoystickLoader.getInstance().init(1);
 		
 		return new FirstSlide(w,h);
 		//return new MotivationSlide(w,h);

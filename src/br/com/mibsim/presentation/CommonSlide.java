@@ -23,7 +23,7 @@ import br.com.mibsim.specie.Speciemen;
 
 public class CommonSlide extends Application implements Slide {
 
-	protected int quantity = 0;
+	protected int quantity = 4;
 	
 	protected Font font;
 

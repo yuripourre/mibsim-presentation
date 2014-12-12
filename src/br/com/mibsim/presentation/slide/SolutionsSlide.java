@@ -22,7 +22,9 @@ public class SolutionsSlide extends CommonSlide {
 		super.draw(g);
 				
 		drawTitle(g, "Solução");
-		drawSentence(g, 0, "Rede de aspiradores colaborativos");
+		drawSentence(g, 0, "Robôs autônomos colaborativos");
+		
+		//Separar como objetivos
 		drawSentence(g, 1, "Economia de bateria (menos retrabalho)");
 		drawSentence(g, 2, "Integração com novos indivíduos");
 	}

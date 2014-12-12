@@ -12,7 +12,9 @@ public class ConclusionSlide extends CommonSlide {
 	@Override
 	public void load() {
 		super.load();
-						
+					
+		quantity = 40;
+		
 		loading = 100;
 	}	
 	
