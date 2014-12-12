@@ -1,12 +1,6 @@
 import br.com.etyllica.EtyllicaFrame;
 import br.com.etyllica.context.Application;
-import br.com.etyllica.core.loader.JoystickLoader;
 import br.com.mibsim.presentation.slide.FirstSlide;
-import br.com.mibsim.presentation.slide.MotivationSlide;
-import br.com.mibsim.presentation.slide.ProblemsSlide;
-import br.com.mibsim.presentation.slide.SolutionsSlide;
-import br.com.mibsim.presentation.slide.UsageSlide;
-import br.com.mibsim.presentation.slide.proposal.ProposalSlide;
 
 
 public class Presentation extends EtyllicaFrame {

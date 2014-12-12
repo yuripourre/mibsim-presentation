@@ -2,7 +2,7 @@ package br.com.mibsim.presentation.slide.proposal;
 
 import br.com.etyllica.core.graphics.Graphic;
 import br.com.mibsim.presentation.CommonSlide;
-import br.com.mibsim.presentation.slide.SolutionsSlide;
+import br.com.mibsim.presentation.slide.UsageSlide;
 
 public class ProposalSlide extends CommonSlide {
 	
@@ -30,12 +30,12 @@ public class ProposalSlide extends CommonSlide {
 	
 	@Override
 	public void nextSlide() {
-		nextApplication = new RequirementsSlide(w, h);
+		nextApplication = new ComparisonSlide(w, h);
 	}
 	
 	@Override
 	public void previousSlide() {
-		nextApplication = new SolutionsSlide(w, h);
+		nextApplication = new UsageSlide(w, h);
 	}
 
 }

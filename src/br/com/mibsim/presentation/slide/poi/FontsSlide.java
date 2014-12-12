@@ -2,10 +2,11 @@ package br.com.mibsim.presentation.slide.poi;
 
 import br.com.etyllica.core.graphics.Graphic;
 import br.com.mibsim.presentation.CommonSlide;
+import br.com.mibsim.presentation.slide.proposal.EndOfSimulationSlide;
 
-public class BasementsSlide extends CommonSlide {
+public class FontsSlide extends CommonSlide {
 	
-	public BasementsSlide(int w, int h) {
+	public FontsSlide(int w, int h) {
 		super(w, h);
 	}
 
@@ -22,20 +23,19 @@ public class BasementsSlide extends CommonSlide {
 	public void draw(Graphic g) {
 		super.draw(g);
 		
-		drawTitle(g, "Bases estratégicas");
-		drawSentence(g, 1, "Cada espécie possui sua própria base");
-		drawSentence(g, 2, "Serve de local de encontro para reportar");
-		drawSentence(g, 3, "o que foi encontrado no setor designado");
+		drawTitle(g, "Fontes de Nutrientes");
+		drawSentence(g, 1, "Água");
+		drawSentence(g, 2, "Adamantita");
 	}
 	
 	@Override
 	public void nextSlide() {
-		nextApplication = new FontsSlide(w, h);
+		nextApplication = new EndOfSimulationSlide(w, h);
 	}
 	
 	@Override
 	public void previousSlide() {
-		nextApplication = new SpeciesSlide(w, h);
+		nextApplication = new BasementsSlide(w, h);
 	}
 
 }

@@ -24,6 +24,7 @@ public class AgentsSlide extends CommonSlide {
 		super.draw(g);
 				
 		drawTitle(g, "Agentes");
+		//Remove something
 		drawSentence(g, 0, "Os agentes exploram o mapa por setores");
 		drawSentence(g, 1, "assim que explora um setor designado");
 		drawSentence(g, 2, "volta até a base e reporta o encontrado");

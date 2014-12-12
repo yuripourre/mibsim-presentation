@@ -2,6 +2,8 @@ package br.com.mibsim.presentation.slide.proposal;
 
 import br.com.etyllica.core.graphics.Graphic;
 import br.com.mibsim.presentation.CommonSlide;
+import br.com.mibsim.presentation.slide.conclusion.ConclusionSlide;
+import br.com.mibsim.presentation.slide.poi.FontsSlide;
 
 public class EndOfSimulationSlide extends CommonSlide {
 	
@@ -37,7 +39,7 @@ public class EndOfSimulationSlide extends CommonSlide {
 	
 	@Override
 	public void previousSlide() {
-		nextApplication = new HowItWorksSlide(w, h);
+		nextApplication = new FontsSlide(w, h);
 	}
 
 }

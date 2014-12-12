@@ -1,7 +1,8 @@
-package br.com.mibsim.presentation.slide.proposal;
+package br.com.mibsim.presentation.slide.conclusion;
 
 import br.com.etyllica.core.graphics.Graphic;
 import br.com.mibsim.presentation.CommonSlide;
+import br.com.mibsim.presentation.slide.proposal.EndOfSimulationSlide;
 
 public class ConclusionSlide extends CommonSlide {
 	
@@ -12,8 +13,6 @@ public class ConclusionSlide extends CommonSlide {
 	@Override
 	public void load() {
 		super.load();
-					
-		quantity = 40;
 		
 		loading = 100;
 	}	
@@ -32,8 +31,7 @@ public class ConclusionSlide extends CommonSlide {
 	
 	@Override
 	public void nextSlide() {
-		// TODO Auto-generated method stub
-		
+		nextApplication = new LimitationSlide(w, h);
 	}
 	
 	@Override
