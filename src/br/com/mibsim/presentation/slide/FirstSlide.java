@@ -33,6 +33,13 @@ public class FirstSlide extends CommonSlide {
 		g.setFontSize(66);
 		g.drawStringBorderX("Um processo de colaboração", 310);
 		g.drawStringBorderX("entre robôs autônomos", 390);
+		
+		g.setFontSize(44);
+		g.drawStringBorder("Yuri Vitor Pourre", 80,  510);
+		
+		g.setFontSize(32);
+		g.drawStringBorder("Orientadora:", 600,  460, 400, 20);
+		g.drawStringBorder("Kate Cerqueira Revoredo", 600,  500, 400, 20);
 	}
 	
 	@Override

@@ -16,14 +16,16 @@ import br.com.mibsim.editor.WraparoundGrid;
 import br.com.mibsim.editor.ZergGrid;
 import br.com.mibsim.planning.PlanningAction;
 import br.com.mibsim.planning.PlanningTask;
-import br.com.mibsim.specie.BlueLurker;
-import br.com.mibsim.specie.GreenUltralisk;
-import br.com.mibsim.specie.RedHydralisk;
+import br.com.mibsim.specie.Lurker;
+import br.com.mibsim.specie.Ultralisk;
+import br.com.mibsim.specie.Hydralisk;
 import br.com.mibsim.specie.Speciemen;
 
 public class CommonSlide extends Application implements Slide {
 
-	protected int quantity = 4;
+	protected int quantity = 12;
+	
+	protected int border = 420;
 	
 	protected Font font;
 
@@ -48,7 +50,7 @@ public class CommonSlide extends Application implements Slide {
 			generateRandomBug();
 		}
 
-		updateAtFixedRate(200);
+		updateAtFixedRate(70);
 
 		loading = 10;
 	}
@@ -71,11 +73,11 @@ public class CommonSlide extends Application implements Slide {
 		Speciemen bug = null;
 
 		if(specie == 1) {
-			bug = new GreenUltralisk(point.getX(), point.getY(), null);
+			bug = new Ultralisk(point.getX(), point.getY(), null);
 		} else if(specie == 2) {
-			bug = new BlueLurker(point.getX(), point.getY(), null);
+			bug = new Lurker(point.getX(), point.getY(), null);
 		} else if(specie == 0) {
-			bug = new RedHydralisk(point.getX(), point.getY(), null);
+			bug = new Hydralisk(point.getX(), point.getY(), null);
 		}
 
 		generateRandomTask(bug);
@@ -88,8 +90,6 @@ public class CommonSlide extends Application implements Slide {
 		Random random = new Random();
 
 		int positioning = random.nextInt(4);
-
-		int border = 40;
 
 		PointInt2D point = new PointInt2D();
 		
