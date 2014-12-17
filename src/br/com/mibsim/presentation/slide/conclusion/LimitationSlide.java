@@ -2,7 +2,6 @@ package br.com.mibsim.presentation.slide.conclusion;
 
 import br.com.etyllica.core.graphics.Graphic;
 import br.com.mibsim.presentation.CommonSlide;
-import br.com.mibsim.presentation.slide.proposal.EndOfSimulationSlide;
 
 public class LimitationSlide extends CommonSlide {
 	
@@ -23,12 +22,13 @@ public class LimitationSlide extends CommonSlide {
 				
 		drawTitle(g, "Limitações");
 		drawSentence(g, 0, "O algoritmo de movimentação dos agentes");
-		drawSentence(g, 1, "não considera obstáculos");				
+		drawSentence(g, 1, "não considera obstáculos.");
+		drawSentence(g, 2, "Os agentes só podem ter um tipo de nutriente.");
 	}
 	
 	@Override
 	public void nextSlide() {
-		nextApplication = new FutureWorkSlide(w, h);		
+		nextApplication = new FutureWorkSlide(w, h);
 	}
 	
 	@Override

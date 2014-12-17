@@ -1,5 +1,6 @@
 package br.com.mibsim.presentation;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import br.com.etyllica.core.loader.FontLoader;
 import br.com.etyllica.linear.PointInt2D;
 import br.com.mibsim.editor.WraparoundGrid;
 import br.com.mibsim.editor.ZergGrid;
+import br.com.mibsim.model.fountain.Fountain;
 import br.com.mibsim.planning.PlanningAction;
 import br.com.mibsim.planning.PlanningTask;
 import br.com.mibsim.specie.Lurker;
@@ -24,8 +26,10 @@ import br.com.mibsim.specie.Speciemen;
 public class CommonSlide extends Application implements Slide {
 
 	protected int quantity = 12;
+		
+	private int border = 340;
 	
-	protected int border = 420;
+	private int fixedBorder = 100;
 	
 	protected Font font;
 
@@ -33,7 +37,11 @@ public class CommonSlide extends Application implements Slide {
 
 	private boolean isFontSet = false;
 
-	private List<Speciemen> bugs = new ArrayList<Speciemen>();
+	private BasicStroke thinLine = new BasicStroke(1f);
+	
+	protected List<Speciemen> bugs = new ArrayList<Speciemen>();
+	
+	protected List<Fountain> fountains = new ArrayList<Fountain>();
 
 	public CommonSlide(int w, int h) {
 		super(w, h);
@@ -41,7 +49,9 @@ public class CommonSlide extends Application implements Slide {
 
 	@Override
 	public void load() {
-
+		
+		paused = true;
+		
 		font = FontLoader.getInstance().loadFont("Suplexmentary_Comic_NC.ttf");
 
 		grid = new ZergGrid(w, h);
@@ -57,6 +67,10 @@ public class CommonSlide extends Application implements Slide {
 
 	@Override
 	public void timeUpdate(long now) {
+		
+		if(paused)
+			return;
+		
 		for(Speciemen bug: bugs) {
 			bug.update(now);
 		}
@@ -95,16 +109,16 @@ public class CommonSlide extends Application implements Slide {
 		
 		switch (positioning) {
 		case 0:
-			point.setLocation(-random.nextInt(border), random.nextInt(h));
+			point.setLocation(-fixedBorder-random.nextInt(border), random.nextInt(h));
 			break;
 		case 1:
-			point.setLocation(random.nextInt(w), -random.nextInt(border));
+			point.setLocation(random.nextInt(w), -fixedBorder-random.nextInt(border));
 			break;
 		case 2:
-			point.setLocation(w+random.nextInt(border), random.nextInt(h));
+			point.setLocation(w+fixedBorder+random.nextInt(border), random.nextInt(h));
 			break;
 		case 3:
-			point.setLocation(random.nextInt(w), h+random.nextInt(border));
+			point.setLocation(random.nextInt(w), h+fixedBorder+random.nextInt(border));
 			break;
 		}
 		
@@ -125,11 +139,16 @@ public class CommonSlide extends Application implements Slide {
 
 	@Override
 	public void draw(Graphic g) {
+		g.setStroke(thinLine);
 		grid.draw(g);
 
 		if(!isFontSet)
 			setupFont(g);
 
+		for(Fountain fountain: fountains) {
+			fountain.draw(g, 0, 0);
+		}
+		
 		for(Speciemen bug: bugs) {
 			bug.draw(g, 0, 0);
 		}
@@ -144,6 +163,11 @@ public class CommonSlide extends Application implements Slide {
 
 	@Override
 	public GUIEvent updateKeyboard(KeyEvent event) {
+		
+		if(event.isKeyDown(KeyEvent.TSK_P)) {
+			paused = !paused;
+		}			
+		
 		if(event.isAnyKeyDown(KeyEvent.TSK_SPACE, KeyEvent.TSK_RIGHT_ARROW, KeyEvent.TSK_JOYSTICK_RIGHT))
 			nextSlide();
 

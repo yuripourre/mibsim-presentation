@@ -2,7 +2,7 @@ package br.com.mibsim.presentation.slide.proposal;
 
 import br.com.etyllica.core.graphics.Graphic;
 import br.com.mibsim.presentation.CommonSlide;
-import br.com.mibsim.presentation.slide.UsageSlide;
+import br.com.mibsim.presentation.slide.ProblemsSlide;
 
 public class ProposalSlide extends CommonSlide {
 	
@@ -22,20 +22,20 @@ public class ProposalSlide extends CommonSlide {
 		super.draw(g);
 				
 		drawTitle(g, "Proposta");
-		drawSentence(g, 0, "Processo de colaboração entre robôs autônomos");
-		drawSentence(g, 1, "Genérico o suficiente para funcionar");
-		drawSentence(g, 2, "em situações diversas");
-		drawSentence(g, 3, "Considera o uso de sensores");
+		drawSentence(g, 0, "Processo de colaboração entre robôs autônomos,");
+		drawSentence(g, 1, "genérico o suficiente para funcionar");
+		drawSentence(g, 2, "em situações diversas;");
+		drawSentence(g, 3, "Considera o uso de sensores;");
 	}
 	
 	@Override
 	public void nextSlide() {
-		nextApplication = new ComparisonSlide(w, h);
+		nextApplication = new RequirementsSlide(w, h);
 	}
 	
 	@Override
 	public void previousSlide() {
-		nextApplication = new UsageSlide(w, h);
+		nextApplication = new ProblemsSlide(w, h);
 	}
 
 }

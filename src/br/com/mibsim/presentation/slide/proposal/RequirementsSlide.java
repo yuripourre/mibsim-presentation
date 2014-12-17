@@ -20,15 +20,15 @@ public class RequirementsSlide extends CommonSlide {
 	public void draw(Graphic g) {
 		super.draw(g);
 				
-		drawTitle(g, "Requisitos");
+		drawTitle(g, "Pré-Requisitos");
 		drawSentence(g, 0, "Agentes precisam:");
-		drawSentence(g, 1, "Possuir características semelhantes");
-		drawSentence(g, 2, "Conhecer préviamente um ponto do mapa");		
+		drawSentence(g, 1, "Possuir características semelhantes;");
+		drawSentence(g, 2, "Conhecer préviamente um ponto do mapa (base);");		
 	}
 	
 	@Override
 	public void nextSlide() {
-		nextApplication = new DescriptionSlide(w, h);
+		nextApplication = new ApplicationSlide(w, h);
 	}
 	
 	@Override

@@ -2,7 +2,7 @@ package br.com.mibsim.presentation.slide.conclusion;
 
 import br.com.etyllica.core.graphics.Graphic;
 import br.com.mibsim.presentation.CommonSlide;
-import br.com.mibsim.presentation.slide.proposal.EndOfSimulationSlide;
+import br.com.mibsim.presentation.slide.proposal.AgentBehaviorSlide;
 
 public class ConclusionSlide extends CommonSlide {
 	
@@ -23,10 +23,10 @@ public class ConclusionSlide extends CommonSlide {
 				
 		drawTitle(g, "Conclusão");
 		drawSentence(g, 0, "O MibSim pode ser usado em diversas situações");
-		drawSentence(g, 1, "desde que o problema se encaixe nos requisitos");
-		drawSentence(g, 2, "No caso dos aspiradores de pó");
-		drawSentence(g, 3, "a proposta prevê pontos de reabastecimento");
-		
+		drawSentence(g, 1, "desde que o problema possua os pré-requisitos.");
+		drawSentence(g, 2, "No caso dos robôs autônomos, o MibSim");
+		drawSentence(g, 3, "coordenaria os trajetos evitando possíveis");
+		drawSentence(g, 4, "redundâncias nas rotas.");		
 	}
 	
 	@Override
@@ -36,7 +36,7 @@ public class ConclusionSlide extends CommonSlide {
 	
 	@Override
 	public void previousSlide() {
-		nextApplication = new EndOfSimulationSlide(w, h);
+		nextApplication = new AgentBehaviorSlide(w, h);
 	}
 
 }

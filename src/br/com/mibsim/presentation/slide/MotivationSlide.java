@@ -22,8 +22,8 @@ public class MotivationSlide extends CommonSlide {
 				
 		drawTitle(g, "Motivação");
 		drawSentence(g, 0, "Robôs autônomos já são uma realidade e");
-		drawSentence(g, 1, "estão chegando às casas das pessoas comuns");
-		drawSentence(g, 3, "Ainda há alguns obstáculos a serem vencidos");
+		drawSentence(g, 1, "estão chegando às casas das pessoas.");
+		drawSentence(g, 3, "Ainda há alguns obstáculos a serem vencidos.");
 	}
 		
 	@Override

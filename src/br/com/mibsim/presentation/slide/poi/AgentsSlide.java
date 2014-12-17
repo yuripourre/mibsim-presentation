@@ -24,13 +24,11 @@ public class AgentsSlide extends CommonSlide {
 		super.draw(g);
 				
 		drawTitle(g, "Agentes");
-		//Remove something
-		drawSentence(g, 0, "Os agentes exploram o mapa por setores");
-		drawSentence(g, 1, "assim que explora um setor designado");
-		drawSentence(g, 2, "volta até a base e reporta o encontrado");
-		drawSentence(g, 3, "Quando sente fome, o agente suspende a exploração");
-		drawSentence(g, 4, "e busca por alguma fonte de nutrientes conhecida");
-		
+
+		drawSentence(g, 0, "Os agentes são os seres que habitam o MibSim.");
+		drawSentence(g, 1, "Eles interagem com as bases estratégicas e ");
+		drawSentence(g, 2, "com as fontes de nutrientes.");
+		drawSentence(g, 3, "O papel principal dos agentes é explorar o mapa;");
 	}
 	
 	@Override

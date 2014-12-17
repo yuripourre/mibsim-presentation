@@ -23,9 +23,9 @@ public class DescriptionSlide extends CommonSlide {
 	public void draw(Graphic g) {
 		super.draw(g);
 				
-		drawTitle(g, "Descrição");
+		drawTitle(g, "Descrição Rápida");
 		drawSentence(g, 0, "Simulador de Ambiente Virtual que possui:");
-		drawSentence(g, 1, "Diversos Agentes autônomos");
+		drawSentence(g, 1, "Diversos agentes autônomos");
 		drawSentence(g, 2, "Diversas bases estratégicas");
 		drawSentence(g, 3, "Diversas fontes de nutrientes");
 		
@@ -38,7 +38,7 @@ public class DescriptionSlide extends CommonSlide {
 	
 	@Override
 	public void previousSlide() {
-		nextApplication = new ProposalSlide(w, h);
+		nextApplication = new ApplicationSlide(w, h);
 	}
 
 }

@@ -25,14 +25,14 @@ public class FirstSlide extends CommonSlide {
 	}
 	
 	protected void drawTitle(Graphic g) {
-		g.setFontSize(100);
-		g.drawStringBorderX("MibSim", 200);
+		g.setFontSize(130);
+		g.drawStringBorderX("MibSim", 150);
 	}
 	
 	protected void drawSubTitle(Graphic g) {
 		g.setFontSize(66);
-		g.drawStringBorderX("Um processo de colaboração", 310);
-		g.drawStringBorderX("entre robôs autônomos", 390);
+		g.drawStringBorderX("Um processo de colaboração", 290);
+		g.drawStringBorderX("entre robôs autônomos", 360);
 		
 		g.setFontSize(44);
 		g.drawStringBorder("Yuri Vitor Pourre", 80,  510);

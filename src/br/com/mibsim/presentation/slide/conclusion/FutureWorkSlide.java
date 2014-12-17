@@ -11,7 +11,7 @@ public class FutureWorkSlide extends CommonSlide {
 
 	@Override
 	public void load() {
-		quantity = 40;
+		quantity = 160;
 		
 		super.load();
 		
@@ -23,7 +23,9 @@ public class FutureWorkSlide extends CommonSlide {
 		super.draw(g);
 				
 		drawTitle(g, "Trabalhos futuros");
-		drawSentence(g, 0, "Levar o MibSim para o mundo real");						
+		drawSentence(g, 0, "Permitir que agentes possam se reproduzir;");
+		drawSentence(g, 1, "Levar o MibSim para o mundo real,");
+		drawSentence(g, 2, "utilizando-o em robôs autônomos;");
 	}
 	
 	@Override

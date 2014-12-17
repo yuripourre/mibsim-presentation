@@ -3,11 +3,11 @@ package br.com.mibsim.presentation.slide.proposal;
 import br.com.etyllica.core.graphics.Graphic;
 import br.com.mibsim.presentation.CommonSlide;
 import br.com.mibsim.presentation.slide.conclusion.ConclusionSlide;
-import br.com.mibsim.presentation.slide.poi.FontsSlide;
+import br.com.mibsim.presentation.slide.poi.FountainsSlide;
 
-public class EndOfSimulationSlide extends CommonSlide {
+public class AgentBehaviorSlide extends CommonSlide {
 	
-	public EndOfSimulationSlide(int w, int h) {
+	public AgentBehaviorSlide(int w, int h) {
 		super(w, h);
 	}
 
@@ -25,10 +25,11 @@ public class EndOfSimulationSlide extends CommonSlide {
 	public void draw(Graphic g) {
 		super.draw(g);
 				
-		drawTitle(g, "Fim da Simulação");
-		drawSentence(g, 0, "A simulação acaba em duas situações:");
-		drawSentence(g, 1, "Quando todos os agentes morrem");
-		drawSentence(g, 2, "Quando alguma espécie explora todo o mapa");
+		drawTitle(g, "Comportamento dos Agentes");
+		drawSentence(g, 0, "Os agentes vão até a base e recebem uma designação.");
+		drawSentence(g, 1, "Exploram o setor designado e retornam para a base.");
+		drawSentence(g, 2, "Quando sentem fome, suspendem a tarefa e andam");
+		drawSentence(g, 3, "até a fonte de nutrientes mais próxima.");
 		
 	}
 	
@@ -39,7 +40,7 @@ public class EndOfSimulationSlide extends CommonSlide {
 	
 	@Override
 	public void previousSlide() {
-		nextApplication = new FontsSlide(w, h);
+		nextApplication = new FountainsSlide(w, h);
 	}
 
 }
